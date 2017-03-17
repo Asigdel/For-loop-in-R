@@ -22,6 +22,7 @@ View(datab)
 
 # Dev_dai-llop-in-R
 
+```
 test1$TD1f<-as.character(test1$TD1)
 for (i in 2:49){ 
   testn<- test1[i,]
@@ -57,3 +58,4 @@ attach(mtcars)
 aggdata <-aggregate(mtcars, by=list(cyl,vs), 
                     FUN=mean, na.rm=TRUE)
 print(aggdata)
+```
