@@ -1,17 +1,22 @@
 # For-loop-in-R
-<55>
-For Loop in R
-for (val in sequence)
-{
-    statement
-}
+To cat data
 
-
-************************* Example *********************************************************************
-x <- c(2,5,3,9,8,11,6)
-count <- 0
-for (val in x) 
-{
-    if(val %% 2 == 0)  count = count+1
+```
+datab<-data.frame()
+str(test1)
+test1$TD1f<-as.character(test1$TD1)
+for (i in 1:49){
+  for (k in 5:24){
+    col1<-test1[i,k]
+    col2<-test1[i,k+20]
+    temp[[k]]<-c(data.frame(col1,col2))
+    print(temp[[k]])
+    datab<-rbind(datab,temp[[k]])
+    #print(data.frame(col1, col2) )
+  }
 }
-print(count)
+print(datab)
+datab$Date<-as.Date.numeric(datab$col1, origin="1970-01-01")
+View(datab)
+```
+
